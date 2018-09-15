@@ -1,0 +1,54 @@
+$navColor:#06c1ae;
+//定义三角形混合
+@mixin arrow($w:10px,$c:#000,$dir:top){
+  width:0;
+  font-size: 0;
+  //所有边透明
+  border:$w solid transparent;
+  //特殊边加颜色,注意插值语法
+  border-#{$dir}-color:$c;
+
+
+}
+//定义清除浮动的混合
+@mixin clearfix(){
+    &:after{
+        content:"";
+        display:block;
+        clear:both;
+  }
+}
+//商品列表样式
+%items{
+  li{
+    margin: 0 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    img{
+      width: 100px;
+      height: 60.5px;
+    }
+    .content{
+      margin-left: 10px;
+      flex: 1;
+      h3{
+        font-size: 14px;
+        height: 40px;
+        line-height: 20px;
+      }
+      p{
+        font-size: 12px;
+        .price{
+          color: $navColor;
+          margin-right: 6px;
+        }
+        .sales{
+          float: right;
+        }
+      }
+
+    }
+
+  }
+}
