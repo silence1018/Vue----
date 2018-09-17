@@ -67,23 +67,27 @@
             })
                 //监听数据返回
                 .then(({data})=>{
-                    console.log(data)
+                    // console.log(data)
                     this.data = data
                 })
         },
         // beforeRouteEnter(){
-        //     console.log("beforeRouteEnter",arguments)
+        //     console.log("66666",arguments)
         // }
+        beforeRouteEnter(route,oldRoute,next){
+            // console.log("当前路由为",route.path)
+            // console.log("上个路由为",oldRoute.path)
+            next()
+        },
+
+
 
     }
 </script>
 
-<style  lang="scss">
+<style  lang="scss" >
     @import "../base.scss";
-    *{
-        margin: 0;
-        padding: 0;
-    }
+    
     .image-part{
         position: relative;
         img{

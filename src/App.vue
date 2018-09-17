@@ -36,7 +36,10 @@ export default {
         },
         goBack:function () {
             this.$router.back(-1)
-        }
+        },
+
+
+
 
     },
     data:function(){
@@ -45,19 +48,27 @@ export default {
         }
 
     },
+    // watch:{
+    //     $route:function () {
+    //         console.log("watch",arguments)
+    //
+    //     }
+    // }
     watch:{
-        $route:function () {
-            console.log("watch",arguments)
-
+        $route:function(){
+            // console.log("路由有变化")
         }
-    }
+    },
+
+
 
 }
 </script>
 
 
-<style lang="scss">
-@import"./base.scss";
+<style  lang="scss">
+@import "./base.scss";
+html,body{overflow:hidden;overflow-y:auto;}
 *{
   margin: 0;
   padding: 0;

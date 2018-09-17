@@ -4,6 +4,8 @@ import App from './App.vue'
 import router from "./router/router.js"
 //引入store
 import store from "./store/store.js"
+import Vuex from "vuex"
+console.log(Vuex)
 
 
 // Vue.config.productionTip = false
@@ -13,6 +15,11 @@ new Vue({
   router,
     //注册store
   store,
+
+
+
+
+
 
 
   render: h => h(App)

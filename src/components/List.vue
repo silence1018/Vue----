@@ -56,8 +56,7 @@
 
              },
             orderList:function(id) {
-                console.log(id)
-
+                // console.log(id)
                 this.list.sort(function(a,b){
                     if(id == "count"){
                         return (b.originPrice-b.price) - (a.originPrice - a.price)
@@ -85,7 +84,7 @@
             this.$http.get(`/data/list.json?id=${this.$route.params.id}`)
             //监听数据返回
                 .then(({data})=>{
-                    console.log(data)
+                    // console.log(data)
                     //list只存储前三个
                     this.list = data.slice(0,3)
                     //others存储剩余的
@@ -95,7 +94,7 @@
     }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
     //引入公共样式
     @import "../base.scss";
     .order{

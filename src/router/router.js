@@ -29,15 +29,19 @@ let router = new VueRouter(
      routes,
      // mode:'history',
 
+
     })
 //监听路由变化
-router.beforeEach(function (route,oldRoute,next) {
-    console.log("beforeEac",arguments)
-    next()
-})
+// router.beforeEach(function(route,oldRoute,next) {
+//     console.log("当前路由为",route.path)
+//     console.log("上个路由为",oldRoute.path)
+//     console.log("6666")
+//     next()
+// })
 // router.afterEach(function () {
 //     console.log(arguments)
 // })
+
 
 //暴露路接口
 export default router

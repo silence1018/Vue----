@@ -62,7 +62,7 @@
                 this.$http.get("data/home.json")
                 //监听返回
                     .then(({data})=>{
-                        console.log(data)
+                        // console.log(data)
                         this.ad = data.ad
                         this.list = data.list
                     })
@@ -70,14 +70,10 @@
     }
 </script>
 
-<style lang="scss" >
+<style lang="scss">
     //引入公共样式
     @import "../base.scss";
-    *{
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
+   
     body,html{
         background:#efefef;
     }
